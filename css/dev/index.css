@@ -240,7 +240,7 @@ body {
   will-change: opacity;
 }
 [data-fls-watcher].--watcher-view.game__card {
-  animation: fade-up 1.2s cubic-bezier(0.18, 0.85, 0.35, 1) 0.8s forwards;
+  animation: opacity 1.2s cubic-bezier(0.18, 0.85, 0.35, 1) 0.8s forwards;
 }
 [data-fls-watcher].--watcher-view.game__red-satellite {
   animation: satellite-move-left 1.3s cubic-bezier(0.18, 0.85, 0.35, 1) 1.4s forwards;
@@ -685,7 +685,7 @@ body {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  top: -37%;
+  top: -45%;
   pointer-events: none;
   overflow: hidden;
 }
@@ -1274,11 +1274,6 @@ body {
 }
 
 /**************************************/
-.products__content {
-  position: relative;
-  display: grid;
-  justify-items: center;
-}
 .products__title {
   text-align: center;
   color: #ffffff;
@@ -1287,13 +1282,14 @@ body {
   letter-spacing: -0.1875rem;
 }
 .products__items {
-  display: flex;
-  gap: 2.5rem 1.875rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  column-gap: 1.875rem;
+  row-gap: 2.5rem;
 }
 .products__item {
-  max-width: 35.625rem;
+  max-width: 37.5rem;
   box-sizing: border-box;
 }
 
@@ -1335,12 +1331,18 @@ body {
 
 /**************************************/
 
-@media (max-width: 75em) {
-  .content-welcome::before {
-    top: 0.3125rem;
+@media (max-width: 75.06125em) {
+  .item-card__text {
+    max-width: 20.625rem;
   }
   .item-card__text--pc {
     display: none;
+  }
+}
+
+@media (max-width: 75em) {
+  .content-welcome::before {
+    top: 0.3125rem;
   }
 }
 
@@ -2036,9 +2038,6 @@ body {
     margin-bottom: 2.5rem;
   }
   .products__item {
-    min-width: 18.125rem;
-  }
-  .products__item {
     padding-top: 2.5rem;
   }
   .products__item {
@@ -2343,9 +2342,6 @@ body {
   }
   .products__title {
     margin-bottom: clamp(2.5rem, 2.04545454545625rem + 2.2727272727vw, 3.75rem);
-  }
-  .products__item {
-    min-width: clamp(18.125rem, 11.7613636363625rem + 31.8181818182vw, 35.625rem);
   }
   .products__item {
     padding-top: clamp(2.5rem, 2.3863636363625rem + 0.5681818182vw, 2.8125rem);
@@ -2823,9 +2819,6 @@ body {
     margin-bottom: 3.75rem;
   }
   .products__item {
-    min-width: 35.625rem;
-  }
-  .products__item {
     padding-top: 2.8125rem;
   }
   .products__item {
@@ -2839,6 +2832,12 @@ body {
   }
   .item-card__text {
     font-size: 1.625rem;
+  }
+}
+
+@media (min-width: 75.06125em) {
+  .products__items {
+    grid-template-columns: repeat(auto-fit, minmax(19.6875rem, 35.625rem));
   }
   .item-card__text--tablet {
     display: none;
