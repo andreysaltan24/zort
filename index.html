@@ -1,1101 +1,720 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <title>Zort</title>
-    <script type="module" crossorigin="" src="./js/index.min.js?v=1753353279042"></script>
-    <link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1753353279042" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
-        <div data-fls-watcher="" data-fls-watcher-once="" class="header__container">
-          <div class="header__logo">
-            <picture>
-              <img alt="Logo Image" src="./assets/img/Logo.webp" />
-            </picture>
-          </div>
-          <div class="header__menu menu">
-            <button type="button" data-fls-menu="" class="menu__icon icon-menu">
-              <span></span>
-            </button>
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Trading Arena
-                    <span class="menu--icon-plus"></span>
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Zort Vaults
-                    <span class="menu--icon-plus"></span>
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Zort Lite
-                    <span class="menu--icon-plus"></span>
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">
-                    Company
-                    <span class="menu--icon-plus"></span>
-                  </a>
-                </li>
-              </ul>
-              <div class="menu__button">
-                <a href="#!" data-fls-button="" class="button button--arena">Join Arena</a>
-              </div>
-            </nav>
-          </div>
-          <!--
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Zort</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1753353279042"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1753353279042">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
+				<div data-fls-watcher="" data-fls-watcher-once="" class="header__container">
+					<div class="header__logo">
+						<picture>
+							<img alt="Logo Image" src="./assets/img/Logo.webp">
+						</picture>
+					</div>
+					<div class="header__menu menu">
+						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										Trading Arena
+										<span class="menu--icon-plus"></span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										Zort Vaults
+										<span class="menu--icon-plus"></span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										Zort Lite
+										<span class="menu--icon-plus"></span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										Company
+										<span class="menu--icon-plus"></span>
+									</a>
+								</li>
+							</ul>
+							<div class="menu__button">
+								<a href="#!" data-fls-button="" class="button button--arena">Join Arena</a>
+							</div>
+						</nav>
+					</div>
+					<!--
 <fetch url="@components/layout/menu/menu.json">
 <each loop='item in response'>
 </each>
 </fetch>
 -->
-          <div class="header__actions">
-            <a href="#!" data-fls-button="" class="button button--small">Login</a>
-            <a href="#!" data-fls-button="" class="button button--small button--green">Sign Up</a>
-          </div>
-        </div>
-      </header>
-      <main class="page page--home">
-        <section class="page__hero hero">
-          <div class="hero__container">
-            <div data-fls-watcher="" data-fls-watcher-once="" class="hero__red-satellite">
-              <picture>
-                <source
-                  media="(max-width: 600px)"
-                  srcset="./assets/img/hero-section/red-arrow-satellite-600.webp"
-                  type="image/webp"
-                />
-                <img alt="Image" src="./assets/img/hero-section/red-arrow-satellite.webp" />
-              </picture>
-            </div>
-            <div data-fls-watcher="" data-fls-watcher-once="" class="hero__green-satellite">
-              <picture>
-                <source
-                  media="(max-width: 600px)"
-                  srcset="./assets/img/hero-section/green-arrow-satellite-600.webp"
-                  type="image/webp"
-                />
-                <img alt="Image" src="./assets/img/hero-section/green-arrow-satellite.webp" />
-              </picture>
-            </div>
-            <div class="hero__content">
-              <h1 data-fls-watcher="" data-fls-watcher-once="" class="hero__title">
-                Ready to test your
-                <span>crypto intuition</span>
-                ?
-              </h1>
-              <div data-fls-watcher="" data-fls-watcher-once="" class="hero__image">
-                <picture>
-                  <source
-                    media="(max-width: 600px)"
-                    srcset="./assets/img/hero-section/main-image-600.webp"
-                    type="image/webp"
-                  />
-                  <img alt="Image test your intuition" src="./assets/img/hero-section/main-image.webp" />
-                </picture>
-              </div>
-              <div data-fls-watcher="" data-fls-watcher-once="" class="hero__text">
-                <p>Turn your guesswork into earnings with our one-of-a-kind prediction platform</p>
-              </div>
-              <div data-fls-watcher="" data-fls-watcher-once="" class="hero__actions">
-                <a href="#!" data-fls-button="" class="button button--arena">Join Us</a>
-                <a href="#!" data-fls-button="" class="button">How it works?</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="page__welcome welcome">
-          <div class="welcome__container">
-            <div
-              data-fls-watcher=""
-              data-fls-watcher-once=""
-              data-fls-watcher-threshold="0.5"
-              class="welcome__content content-welcome"
-            >
-              <div class="content-welcome__item">
-                <div
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.5"
-                  class="content-welcome__image"
-                >
-                  <picture>
-                    <img alt="Image welcome" src="./assets/img/welcome-section/welcome-image.webp" />
-                  </picture>
-                </div>
-              </div>
-              <div class="content-welcome__item">
-                <h2
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.5"
-                  class="content-welcome__text"
-                >
-                  <p>
-                    Welcome to Zort Trading Arena, a
-                    <span>decentralized trading platform</span>
-                    merging analytics, binary, crypto derivatives, and leveraging, with on-chain smart contract data
-                    verification
-                  </p>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="page__about about">
-          <div class="about__container">
-            <div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="about__head">
-              <h2 class="about__title">Zort Trading Arena</h2>
-              <div class="about__text">
-                <p>You’re challenging fellow users, not a big company or exchange</p>
-              </div>
-            </div>
-            <div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="about__body">
-              <div
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.5"
-                class="about__item item-about"
-              >
-                <div class="item-about__image">
-                  <picture>
-                    <img alt="Image circles" src="./assets/img/about-section/01.webp" />
-                  </picture>
-                </div>
-                <div class="item-about__text">
-                  <p>
-                    We
-                    <span>turn crypto predictions into a thrilling game</span>
-                    of strategy and reward!
-                  </p>
-                </div>
-              </div>
-              <div
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.5"
-                class="about__item item-about"
-              >
-                <div class="item-about__image">
-                  <picture>
-                    <img alt="Image triangle" src="./assets/img/about-section/02.webp" />
-                  </picture>
-                </div>
-                <div class="item-about__text">
-                  <p>
-                    <span>Predict the market's moves</span>
-                    , clash with rival traders, and multiply your stakes
-                  </p>
-                </div>
-              </div>
-              <div
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.5"
-                class="about__item item-about"
-              >
-                <div class="item-about__image">
-                  <picture>
-                    <img alt="Image circle" src="./assets/img/about-section/03.webp" />
-                  </picture>
-                </div>
-                <div class="item-about__text">
-                  <p>
-                    Trade smarter, outsmart fellow traders in high-stakes crypto forecasts, and
-                    <span>seize fortunes</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="page__works works">
-          <div class="works__container">
-            <div class="works__content">
-              <h2 data-fls-watcher="" data-fls-watcher-once="" class="works__title">Here is how it works...</h2>
-              <div class="works__items">
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.1"
-                  class="works__item item-work"
-                >
-                  <div class="item-work__image">
-                    <picture>
-                      <img alt="Image join" src="./assets/img/works-section/join.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-work__title">Join a Prediction Pool</div>
-                  <div class="item-work__text">
-                    <p>
-                      Explore a variety of prediction pools based on different cryptocurrencies. These pools bring
-                      together players who are eager to wager on the future prices of their favorite digital assets.
-                    </p>
-                  </div>
-                </article>
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.1"
-                  class="works__item item-work"
-                >
-                  <div class="item-work__image">
-                    <picture>
-                      <img alt="Image place" src="./assets/img/works-section/place.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-work__title">Place Your Prediction</div>
-                  <div class="item-work__text">
-                    <p>
-                      Bet on the future price movement of a specific cryptocurrency. You can choose Bull if you think
-                      the price will rise or Bear if you believe it will fall.
-                    </p>
-                  </div>
-                </article>
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.1"
-                  class="works__item item-work"
-                >
-                  <div class="item-work__image">
-                    <picture>
-                      <img alt="Image set" src="./assets/img/works-section/set.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-work__title">Set Your Stake</div>
-                  <div class="item-work__text">
-                    <p>Determine how much you want to bet on your prediction. Start small or go big, it's up to you!</p>
-                  </div>
-                </article>
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.1"
-                  class="works__item item-work"
-                >
-                  <div class="item-work__image">
-                    <picture>
-                      <img alt="Image unlock" src="./assets/img/works-section/unlock.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-work__title">Unlock Leverage</div>
-                  <div class="item-work__text">
-                    <p>
-                      Amplify your betting power with leverage. Take advantage of leverage options to multiply your
-                      potential winnings by up to 10 times!
-                    </p>
-                  </div>
-                </article>
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.1"
-                  class="works__item item-work"
-                >
-                  <div class="item-work__image">
-                    <picture>
-                      <img alt="Image team" src="./assets/img/works-section/team.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-work__title">Team Competition</div>
-                  <div class="item-work__text">
-                    <p>
-                      Engage in a thrilling battle of
-                      <span class="bull">Bull</span>
-                      versus
-                      <span class="bear">Bear</span>
-                      ! Track the progress of both teams as the prediction unfolds, chat with fellow participants, and
-                      feel the anticipation build. At the end of the prediction period, the winning team takes home the
-                      entire pool.
-                    </p>
-                  </div>
-                </article>
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.1"
-                  class="works__item item-work"
-                >
-                  <div class="item-work__image">
-                    <picture>
-                      <img alt="Image winning" src="./assets/img/works-section/winning.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-work__title">Winning Calculation</div>
-                  <div class="item-work__text">
-                    <p>
-                      The winnings are distributed among the correct predictions based on the proportion of their bets
-                      to the total pool size.
-                    </p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="page__game game">
-          <div class="game__container">
-            <div data-fls-watcher="" data-fls-watcher-once="" class="game__red-satellite">
-              <picture>
-                <img alt="red-satellite" src="./assets/img/game-section/red-satellite.webp" />
-              </picture>
-            </div>
-            <div
-              data-fls-watcher=""
-              data-fls-watcher-once=""
-              data-fls-watcher-threshold="0.3"
-              class="game__green-satellite"
-            >
-              <picture>
-                <img alt="green-satellite" src="./assets/img/game-section/green-satellite.webp" />
-              </picture>
-            </div>
-            <div class="game__content">
-              <div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="game__head">
-                <h2 class="game__title">Get in the game!</h2>
-                <div class="game__text">
-                  <p>Engage in a thrilling battle of Bull VS Bear!</p>
-                </div>
-              </div>
-              <div class="game__body">
-                <div
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.5"
-                  class="game__card card-game bear"
-                >
-                  <div class="card-game__image">
-                    <picture>
-                      <img alt="bear" src="./assets/img/game-section/bear-card/bear.webp" />
-                    </picture>
-                  </div>
-                  <div class="card-game__label">Bear</div>
-                  <ul class="card-game__list list-card">
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/01.png"
-                          alt="Icon-01"
-                        />
-                      </div>
-                      <div class="list-card__name">CryptoDreamer</div>
-                      <div class="list-card__winning">$ 400.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/02.png"
-                          alt="Icon-02"
-                        />
-                      </div>
-                      <div class="list-card__name">BlockchainKing</div>
-                      <div class="list-card__winning">$ 200.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/03.png"
-                          alt="Icon-03"
-                        />
-                      </div>
-                      <div class="list-card__name">RippleRider</div>
-                      <div class="list-card__winning">$ 281.01</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/04.png"
-                          alt="Icon-04"
-                        />
-                      </div>
-                      <div class="list-card__name">CryptoDreamer</div>
-                      <div class="list-card__winning">$ 69.93</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/05.png"
-                          alt="Icon-05"
-                        />
-                      </div>
-                      <div class="list-card__name">NFTCollector</div>
-                      <div class="list-card__winning">$ 18.25</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/06.png/03.png"
-                          alt="Icon-06"
-                        />
-                      </div>
-                      <div class="list-card__name">CryptoKing123</div>
-                      <div class="list-card__winning">$ 50.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/07.png/02.png"
-                          alt="Icon-07"
-                        />
-                      </div>
-                      <div class="list-card__name">SatoshiFanatic</div>
-                      <div class="list-card__winning">$ 25.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/08.png"
-                          alt="Icon-08"
-                        />
-                      </div>
-                      <div class="list-card__name">EtherHodler101</div>
-                      <div class="list-card__winning">$ 199.57</div>
-                    </li>
-                  </ul>
-                  <a href="#!" data-fls-button="" class="card-game__button button button--arena button--arena-bull"
-                    >Join Arena</a
-                  >
-                </div>
-                <div
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.5"
-                  class="game__card card-game bull"
-                >
-                  <div class="card-game__image">
-                    <picture>
-                      <img alt="bull" src="./assets/img/game-section/bull-card/bull.webp" />
-                    </picture>
-                  </div>
-                  <div class="card-game__label">Bull</div>
-                  <ul class="card-game__list list-card">
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bull-card/icons/01.png"
-                          alt="Icon-01"
-                        />
-                      </div>
-                      <div class="list-card__name">BTC_TraderX</div>
-                      <div class="list-card__winning">$400.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/07.png/02.png"
-                          alt="Icon-02"
-                        />
-                      </div>
-                      <div class="list-card__name">BinanceNinja</div>
-                      <div class="list-card__winning">$ 25.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/06.png/03.png"
-                          alt="Icon-03"
-                        />
-                      </div>
-                      <div class="list-card__name">StellarExplorer77</div>
-                      <div class="list-card__winning">$ 50.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/03.png"
-                          alt="Icon-04"
-                        />
-                      </div>
-                      <div class="list-card__name">DogePowerUser</div>
-                      <div class="list-card__winning">$ 281.01</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bull-card/icons/05.png"
-                          alt="Icon-05"
-                        />
-                      </div>
-                      <div class="list-card__name">NEO_Pioneer</div>
-                      <div class="list-card__winning">$ 12.47</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/05.png"
-                          alt="Icon-06"
-                        />
-                      </div>
-                      <div class="list-card__name">ADA_Warrior</div>
-                      <div class="list-card__winning">$ 18.25</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bear-card/icons/01.png"
-                          alt="Icon-07"
-                        />
-                      </div>
-                      <div class="list-card__name">MoonMissionXLM</div>
-                      <div class="list-card__winning">$ 400.00</div>
-                    </li>
-                    <li class="list-card__item">
-                      <div class="list-card__logo">
-                        <img
-                          data-fls-image-ignore=""
-                          src="./assets/img/game-section/bull-card/icons/08.png"
-                          alt="Icon-08"
-                        />
-                      </div>
-                      <div class="list-card__name">Ethereum_Eagle</div>
-                      <div class="list-card__winning">$ 50.00</div>
-                    </li>
-                  </ul>
-                  <a href="#!" data-fls-button="" class="card-game__button button button--arena">Join Arena</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="page__feedback feedback">
-          <div class="feedback__container">
-            <div class="feedback__content">
-              <h2 data-fls-watcher="" data-fls-watcher-once="" class="feedback__title">
-                Our users are not just winning — they're winning big!
-              </h2>
-              <div
-                data-fls-slider=""
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.2"
-                class="feedback__items feedback__slider swiper"
-              >
-                <div class="feedback__wrapper swiper-wrapper">
-                  <div
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="feedback__slide swiper-slide"
-                  >
-                    <div class="feedback__item item-feedback">
-                      <div class="item-feedback__rating">
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                      </div>
-                      <div class="item-feedback__text">
-                        <p>Safe, fair, and fun – this crypto betting site checks all the boxes!</p>
-                      </div>
-                      <div class="item-feedback__author">@CoinWizard</div>
-                    </div>
-                  </div>
-                  <div
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="feedback__slide swiper-slide"
-                  >
-                    <div class="feedback__item item-feedback">
-                      <div class="item-feedback__rating">
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                      </div>
-                      <div class="item-feedback__text">
-                        <p>
-                          User-friendly, secure, and exciting! This platform makes betting with cryptocurrencies a
-                          breeze. Plus, the live betting feature adds a whole new level of thrill to the experience.
-                        </p>
-                      </div>
-                      <div class="item-feedback__author">@CoinWizard</div>
-                    </div>
-                  </div>
-                  <div
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="feedback__slide swiper-slide"
-                  >
-                    <div class="feedback__item item-feedback">
-                      <div class="item-feedback__rating">
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                      </div>
-                      <div class="item-feedback__text">
-                        <p>
-                          I've tried a few crypto betting platforms, and this one stands out for its excellent customer
-                          support. Whenever I had an issue, they were quick to respond and resolve it. Top-notch
-                          service!
-                        </p>
-                      </div>
-                      <div class="item-feedback__author">@CoinWizard</div>
-                    </div>
-                  </div>
-                  <div
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="feedback__slide swiper-slide"
-                  >
-                    <div class="feedback__item item-feedback">
-                      <div class="item-feedback__rating">
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                        <span class="item-feedback__rating--icon-star"></span>
-                      </div>
-                      <div class="item-feedback__text">
-                        <p>
-                          Finally found a secure and fun way to bet with my crypto. The user interface is top-notch,
-                          making it a pleasure to place bets.
-                        </p>
-                      </div>
-                      <div class="item-feedback__author">@CoinWizard</div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.2"
-                  class="feedback__pagination swiper-pagination"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="page__products products">
-          <div class="products__container">
-            <div class="products__content">
-              <h2 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="products__title">
-                Explore Other Products
-              </h2>
-              <div class="products__items">
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.2"
-                  class="products__item item-card"
-                >
-                  <div class="item-card__logo">
-                    <picture>
-                      <img alt="zort lite" src="./assets/img/products-section/zort-lite.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-card__text">
-                    <p>
-                      Simple and Secure
-                      <br />
-                      Quantitative Trading
-                    </p>
-                  </div>
-                  <div class="item-card__image">
-                    <picture>
-                      <img alt="zort lite diagramm" src="./assets/img/products-section/zort-lite-ui.webp" />
-                    </picture>
-                  </div>
-                  <a href="#!" data-fls-button="" class="item-card__button button">Learn More</a>
-                </article>
-                <article
-                  data-fls-watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.2"
-                  class="products__item item-card"
-                >
-                  <div class="item-card__logo">
-                    <picture>
-                      <img alt="zort vaults" src="./assets/img/products-section/zort-vaults.webp" />
-                    </picture>
-                  </div>
-                  <div class="item-card__text item-card__text--pc">
-                    <p>Turn your guesswork into earnings with our one-of-a-kind prediction platform</p>
-                  </div>
-                  <div class="item-card__text item-card__text--tablet">
-                    <p>Curated crypto portfolios with auto-rebalancing</p>
-                  </div>
-                  <div class="item-card__image">
-                    <picture>
-                      <img alt="zort vaults diagramm" src="./assets/img/products-section/zort-vaults-ui.webp" />
-                    </picture>
-                  </div>
-                  <a href="#!" data-fls-button="" class="item-card__button button">Learn More</a>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer data-fls-footer="" class="footer">
-        <div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="footer__main-bg">
-          <picture>
-            <source media="(max-width: 767px)" srcset="./assets/img/footer/background-767.webp" type="image/webp" />
-            <img alt="Image" src="./assets/img/footer/background.webp" />
-          </picture>
-        </div>
-        <div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3" class="footer__ellipse-bg">
-          <picture>
-            <source
-              media="(max-width: 767px)"
-              srcset="./assets/img/footer/bg-ellipse-small-767.webp"
-              type="image/webp"
-            />
-            <img alt="Image" src="./assets/img/footer/bg-ellipse-small.webp" />
-          </picture>
-        </div>
-        <div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3" class="footer__stars-bg">
-          <picture>
-            <source media="(max-width: 767px)" srcset="./assets/img/footer/stars-767.webp" type="image/webp" />
-            <img alt="Image" src="./assets/img/footer/stars.webp" />
-          </picture>
-        </div>
-        <div class="footer__container">
-          <div class="footer__content">
-            <div class="footer__head head-footer">
-              <a
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.2"
-                href="#!"
-                class="head-footer__logo"
-              >
-                <picture>
-                  <img alt="Logo" src="./assets/img/Logo.webp" />
-                </picture>
-              </a>
-              <div
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.2"
-                class="head-footer__action"
-              >
-                <a href="#!" class="head-footer__button button button--green">Join Arena</a>
-              </div>
-              <div class="head-footer__items">
-                <div class="head-footer__item item-menu item-menu--mobile">
-                  <h3
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="item-menu__title"
-                  >
-                    Products
-                  </h3>
-                  <ul class="item-menu__list">
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference item-menu__reference--mobile"
-                    >
-                      <a href="#!" class="item-menu__link item-menu__link--mobile">
-                        Zort
-                        <span>Trading Arena</span>
-                        <span class="menu--icon-plus"></span>
-                      </a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference item-menu__reference--mobile"
-                    >
-                      <a href="#!" class="item-menu__link item-menu__link--mobile">
-                        Z
-                        <span>Vaults</span>
-                        <span class="menu--icon-plus"></span>
-                      </a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference item-menu__reference--mobile"
-                    >
-                      <a href="#!" class="item-menu__link item-menu__link--mobile">
-                        Zort
-                        <span>Lite</span>
-                        <span class="menu--icon-plus"></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="head-footer__item item-menu item-menu--pc">
-                  <h3
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="item-menu__title"
-                  >
-                    Trading Arena
-                  </h3>
-                  <ul class="item-menu__list">
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">About</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">How It Works</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Reviews</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="head-footer__item item-menu item-menu--pc">
-                  <h3
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="item-menu__title"
-                  >
-                    ZVaults
-                  </h3>
-                  <ul class="item-menu__list">
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">About</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">How It Works</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Reviews</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="head-footer__item item-menu item-menu--pc">
-                  <h3
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="item-menu__title"
-                  >
-                    Zort Lite
-                  </h3>
-                  <ul class="item-menu__list">
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Technology</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Security</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Zort Coin</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="head-footer__item item-menu">
-                  <h3
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="item-menu__title"
-                  >
-                    Company
-                  </h3>
-                  <ul class="item-menu__list">
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">About Us</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Support</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">FAQ's</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="head-footer__item item-menu">
-                  <h3
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    class="item-menu__title"
-                  >
-                    Resources
-                  </h3>
-                  <ul class="item-menu__list">
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Terms of Service</a>
-                    </li>
-                    <li
-                      data-fls-watcher=""
-                      data-fls-watcher-once=""
-                      data-fls-watcher-threshold="0.2"
-                      class="item-menu__reference"
-                    >
-                      <a href="#!" class="item-menu__link">Privacy Policy</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="head-footer__app app">
-                <h3
-                  data-fls-watcher=""
-                  watcher=""
-                  data-fls-watcher-once=""
-                  data-fls-watcher-threshold="0.2"
-                  class="app__title"
-                >
-                  Get the app
-                </h3>
-                <div class="app__actions">
-                  <a
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    href="#!"
-                    data-fls-button=""
-                    class="app__button button button--small"
-                    >Login</a
-                  >
-                  <a
-                    data-fls-watcher=""
-                    data-fls-watcher-once=""
-                    data-fls-watcher-threshold="0.2"
-                    href="#!"
-                    data-fls-button=""
-                    class="app__button button button--small button--green"
-                    >Sign Up</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="footer__bottom bottom-footer">
-              <div
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.1"
-                class="bottom-footer__social"
-              >
-                <a
-                  href="#!"
-                  class="bottom-footer__link bottom-footer__link--instagram bottom-footer__link--icon-instagram"
-                >
-                  <span class="bottom-footer__text">Instagram</span>
-                </a>
-                <a href="#!" class="bottom-footer__link bottom-footer__link--x bottom-footer__link--icon-x">
-                  <span class="bottom-footer__text">Twitter</span>
-                </a>
-                <a href="#!" class="bottom-footer__link bottom-footer__link--youtube bottom-footer__link--icon-youtube">
-                  <span class="bottom-footer__text">YouTube</span>
-                </a>
-                <a
-                  href="#!"
-                  class="bottom-footer__link bottom-footer__link--telegram bottom-footer__link--icon-telegram"
-                >
-                  <span class="bottom-footer__text">Telegram</span>
-                </a>
-              </div>
-              <div
-                data-fls-watcher=""
-                data-fls-watcher-once=""
-                data-fls-watcher-threshold="0.1"
-                class="bottom-footer__copy"
-              >
-                © ZORT Inc. 2023 All rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+					<div class="header__actions">
+						<a href="#!" data-fls-button="" class="button button--small">Login</a>
+						<a href="#!" data-fls-button="" class="button button--small button--green">Sign Up</a>
+					</div>
+				</div>
+			</header>
+			<main class="page page--home">
+				<section class="page__hero hero">
+					<div class="hero__container">
+						<div data-fls-watcher="" data-fls-watcher-once="" class="hero__red-satellite">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/hero-section/red-arrow-satellite-600.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/hero-section/red-arrow-satellite.webp">
+							</picture>
+						</div>
+						<div data-fls-watcher="" data-fls-watcher-once="" class="hero__green-satellite">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/hero-section/green-arrow-satellite-600.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/hero-section/green-arrow-satellite.webp">
+							</picture>
+						</div>
+						<div class="hero__content">
+							<h1 data-fls-watcher="" data-fls-watcher-once="" class="hero__title">
+								Ready to test your
+								<span>crypto intuition</span>
+								?
+							</h1>
+							<div data-fls-watcher="" data-fls-watcher-once="" class="hero__image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero-section/main-image-600.webp" type="image/webp">
+									<img alt="Image test your intuition" src="./assets/img/hero-section/main-image.webp">
+								</picture>
+							</div>
+							<div data-fls-watcher="" data-fls-watcher-once="" class="hero__text">
+								<p>Turn your guesswork into earnings with our one-of-a-kind prediction platform</p>
+							</div>
+							<div data-fls-watcher="" data-fls-watcher-once="" class="hero__actions">
+								<a href="#!" data-fls-button="" class="button button--arena">Join Us</a>
+								<a href="#!" data-fls-button="" class="button">How it works?</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__welcome welcome">
+					<div class="welcome__container">
+						<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="welcome__content content-welcome">
+							<div class="content-welcome__item">
+								<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="content-welcome__image">
+									<picture>
+										<img alt="Image welcome" src="./assets/img/welcome-section/welcome-image.webp">
+									</picture>
+								</div>
+							</div>
+							<div class="content-welcome__item">
+								<h2 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="content-welcome__text">
+									<p>
+										Welcome to Zort Trading Arena, a
+										<span>decentralized trading platform</span>
+										merging analytics, binary,
+              crypto derivatives, and leveraging, with on-chain smart contract data verification
+									</p>
+								</h2>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__about about">
+					<div class="about__container">
+						<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="about__head">
+							<h2 class="about__title">Zort Trading Arena</h2>
+							<div class="about__text">
+								<p>You’re challenging fellow users, not a big company or exchange</p>
+							</div>
+						</div>
+						<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="about__body">
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="about__item item-about">
+								<div class="item-about__image">
+									<picture>
+										<img alt="Image circles" src="./assets/img/about-section/01.webp">
+									</picture>
+								</div>
+								<div class="item-about__text">
+									<p>
+										We
+										<span>turn crypto predictions into a thrilling game</span>
+										of strategy and reward!
+									</p>
+								</div>
+							</div>
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="about__item item-about">
+								<div class="item-about__image">
+									<picture>
+										<img alt="Image triangle" src="./assets/img/about-section/02.webp">
+									</picture>
+								</div>
+								<div class="item-about__text">
+									<p>
+										<span>Predict the market's moves</span>
+										, clash with rival traders, and multiply your stakes
+									</p>
+								</div>
+							</div>
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="about__item item-about">
+								<div class="item-about__image">
+									<picture>
+										<img alt="Image circle" src="./assets/img/about-section/03.webp">
+									</picture>
+								</div>
+								<div class="item-about__text">
+									<p>
+										Trade smarter, outsmart fellow traders in high-stakes crypto forecasts, and
+										<span>seize fortunes</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__works works">
+					<div class="works__container">
+						<div class="works__content">
+							<h2 data-fls-watcher="" data-fls-watcher-once="" class="works__title">Here is how it works...</h2>
+							<div class="works__items">
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="works__item item-work">
+									<div class="item-work__image">
+										<picture>
+											<img alt="Image join" src="./assets/img/works-section/join.webp">
+										</picture>
+									</div>
+									<div class="item-work__title">Join a Prediction Pool</div>
+									<div class="item-work__text">
+										<p>
+											Explore a variety of prediction pools based on different cryptocurrencies. These pools bring together
+                players who are eager to wager on the future prices of their favorite digital assets.
+										</p>
+									</div>
+								</article>
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="works__item item-work">
+									<div class="item-work__image">
+										<picture>
+											<img alt="Image place" src="./assets/img/works-section/place.webp">
+										</picture>
+									</div>
+									<div class="item-work__title">Place Your Prediction</div>
+									<div class="item-work__text">
+										<p>
+											Bet on the future price movement of a specific cryptocurrency. You can choose Bull if you think the
+                price will rise or Bear if you believe it will fall.
+										</p>
+									</div>
+								</article>
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="works__item item-work">
+									<div class="item-work__image">
+										<picture>
+											<img alt="Image set" src="./assets/img/works-section/set.webp">
+										</picture>
+									</div>
+									<div class="item-work__title">Set Your Stake</div>
+									<div class="item-work__text">
+										<p>
+											Determine how much you want to bet on your prediction. Start small or go big, it's up to you!
+										</p>
+									</div>
+								</article>
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="works__item item-work">
+									<div class="item-work__image">
+										<picture>
+											<img alt="Image unlock" src="./assets/img/works-section/unlock.webp">
+										</picture>
+									</div>
+									<div class="item-work__title">Unlock Leverage</div>
+									<div class="item-work__text">
+										<p>
+											Amplify your betting power with leverage. Take advantage of leverage options to multiply your potential
+                winnings by up to 10 times!
+										</p>
+									</div>
+								</article>
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="works__item item-work">
+									<div class="item-work__image">
+										<picture>
+											<img alt="Image team" src="./assets/img/works-section/team.webp">
+										</picture>
+									</div>
+									<div class="item-work__title">Team Competition</div>
+									<div class="item-work__text">
+										<p>
+											Engage in a thrilling battle of
+											<span class="bull">Bull</span>
+											versus
+											<span class="bear">Bear</span>
+											!
+                Track the progress of both teams as the prediction unfolds, chat with fellow participants, and feel the
+                anticipation build. At the end of the prediction period, the winning team takes home the entire pool.
+										</p>
+									</div>
+								</article>
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="works__item item-work">
+									<div class="item-work__image">
+										<picture>
+											<img alt="Image winning" src="./assets/img/works-section/winning.webp">
+										</picture>
+									</div>
+									<div class="item-work__title">Winning Calculation</div>
+									<div class="item-work__text">
+										<p>
+											The winnings are distributed among the correct predictions based on the proportion of their bets to the
+                total pool size.
+										</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__game game">
+					<div class="game__container">
+						<div data-fls-watcher="" data-fls-watcher-once="" class="game__red-satellite">
+							<picture>
+								<img alt="red-satellite" src="./assets/img/game-section/red-satellite.webp">
+							</picture>
+						</div>
+						<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3" class="game__green-satellite">
+							<picture>
+								<img alt="green-satellite" src="./assets/img/game-section/green-satellite.webp">
+							</picture>
+						</div>
+						<div class="game__content">
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="game__head">
+								<h2 class="game__title">Get in the game!</h2>
+								<div class="game__text">
+									<p>Engage in a thrilling battle of Bull VS Bear!</p>
+								</div>
+							</div>
+							<div class="game__body">
+								<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="game__card card-game bear">
+									<div class="card-game__image">
+										<picture>
+											<img alt="bear" src="./assets/img/game-section/bear-card/bear.webp">
+										</picture>
+									</div>
+									<div class="card-game__label">Bear</div>
+									<ul class="card-game__list list-card">
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/01.png" alt="Icon-01">
+											</div>
+											<div class="list-card__name">CryptoDreamer</div>
+											<div class="list-card__winning">$ 400.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/02.png" alt="Icon-02">
+											</div>
+											<div class="list-card__name">BlockchainKing</div>
+											<div class="list-card__winning">$ 200.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/03.png" alt="Icon-03">
+											</div>
+											<div class="list-card__name">RippleRider</div>
+											<div class="list-card__winning">$ 281.01</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/04.png" alt="Icon-04">
+											</div>
+											<div class="list-card__name">CryptoDreamer</div>
+											<div class="list-card__winning">$ 69.93</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/05.png" alt="Icon-05">
+											</div>
+											<div class="list-card__name">NFTCollector</div>
+											<div class="list-card__winning">$ 18.25</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/06.png/03.png" alt="Icon-06">
+											</div>
+											<div class="list-card__name">CryptoKing123</div>
+											<div class="list-card__winning">$ 50.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/07.png/02.png" alt="Icon-07">
+											</div>
+											<div class="list-card__name">SatoshiFanatic</div>
+											<div class="list-card__winning">$ 25.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/08.png" alt="Icon-08">
+											</div>
+											<div class="list-card__name">EtherHodler101</div>
+											<div class="list-card__winning">$ 199.57</div>
+										</li>
+									</ul>
+									<a href="#!" data-fls-button="" class="card-game__button button button--arena button--arena-bull">Join Arena</a>
+								</div>
+								<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.5" class="game__card card-game bull">
+									<div class="card-game__image">
+										<picture>
+											<img alt="bull" src="./assets/img/game-section/bull-card/bull.webp">
+										</picture>
+									</div>
+									<div class="card-game__label">Bull</div>
+									<ul class="card-game__list list-card">
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bull-card/icons/01.png" alt="Icon-01">
+											</div>
+											<div class="list-card__name">BTC_TraderX</div>
+											<div class="list-card__winning">$400.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/07.png/02.png" alt="Icon-02">
+											</div>
+											<div class="list-card__name">BinanceNinja</div>
+											<div class="list-card__winning">$ 25.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/06.png/03.png" alt="Icon-03">
+											</div>
+											<div class="list-card__name">StellarExplorer77</div>
+											<div class="list-card__winning">$ 50.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/03.png" alt="Icon-04">
+											</div>
+											<div class="list-card__name">DogePowerUser</div>
+											<div class="list-card__winning">$ 281.01</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bull-card/icons/05.png" alt="Icon-05">
+											</div>
+											<div class="list-card__name">NEO_Pioneer</div>
+											<div class="list-card__winning">$ 12.47</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/05.png" alt="Icon-06">
+											</div>
+											<div class="list-card__name">ADA_Warrior</div>
+											<div class="list-card__winning">$ 18.25</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bear-card/icons/01.png" alt="Icon-07">
+											</div>
+											<div class="list-card__name">MoonMissionXLM</div>
+											<div class="list-card__winning">$ 400.00</div>
+										</li>
+										<li class="list-card__item">
+											<div class="list-card__logo">
+												<img data-fls-image-ignore="" src="./assets/img/game-section/bull-card/icons/08.png" alt="Icon-08">
+											</div>
+											<div class="list-card__name">Ethereum_Eagle</div>
+											<div class="list-card__winning">$ 50.00</div>
+										</li>
+									</ul>
+									<a href="#!" data-fls-button="" class="card-game__button button button--arena">Join Arena</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__feedback feedback">
+					<div class="feedback__container">
+						<div class="feedback__content">
+							<h2 data-fls-watcher="" data-fls-watcher-once="" class="feedback__title">Our users are not just winning — they're winning big!</h2>
+							<div data-fls-slider="" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="feedback__items feedback__slider swiper">
+								<div class="feedback__wrapper swiper-wrapper">
+									<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="feedback__slide swiper-slide">
+										<div class="feedback__item item-feedback">
+											<div class="item-feedback__rating">
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+											</div>
+											<div class="item-feedback__text">
+												<p>Safe, fair, and fun – this crypto betting site checks all the boxes!</p>
+											</div>
+											<div class="item-feedback__author">@CoinWizard</div>
+										</div>
+									</div>
+									<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="feedback__slide swiper-slide">
+										<div class="feedback__item item-feedback">
+											<div class="item-feedback__rating">
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+											</div>
+											<div class="item-feedback__text">
+												<p>
+													User-friendly, secure, and exciting! This platform makes betting with cryptocurrencies a breeze.
+                    Plus, the live betting feature adds a whole new level of thrill to the experience.
+												</p>
+											</div>
+											<div class="item-feedback__author">@CoinWizard</div>
+										</div>
+									</div>
+									<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="feedback__slide swiper-slide">
+										<div class="feedback__item item-feedback">
+											<div class="item-feedback__rating">
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+											</div>
+											<div class="item-feedback__text">
+												<p>
+													I've tried a few crypto betting platforms, and this one stands out for its excellent customer
+                    support. Whenever I had an issue, they were quick to respond and resolve it. Top-notch service!
+												</p>
+											</div>
+											<div class="item-feedback__author">@CoinWizard</div>
+										</div>
+									</div>
+									<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="feedback__slide swiper-slide">
+										<div class="feedback__item item-feedback">
+											<div class="item-feedback__rating">
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+												<span class="item-feedback__rating--icon-star"></span>
+											</div>
+											<div class="item-feedback__text">
+												<p>
+													Finally found a secure and fun way to bet with my crypto. The user interface is top-notch, making it
+                    a pleasure to place bets.
+												</p>
+											</div>
+											<div class="item-feedback__author">@CoinWizard</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="feedback__pagination swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__products products">
+					<div class="products__container">
+						<div class="products__content">
+							<h2 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="products__title">Explore Other Products</h2>
+							<div class="products__items">
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="products__item item-card">
+									<div class="item-card__logo">
+										<picture>
+											<img alt="zort lite" src="./assets/img/products-section/zort-lite.webp">
+										</picture>
+									</div>
+									<div class="item-card__text">
+										<p>
+											Simple and Secure
+											<br>
+											Quantitative Trading
+										</p>
+									</div>
+									<div class="item-card__image">
+										<picture>
+											<img alt="zort lite diagramm" src="./assets/img/products-section/zort-lite-ui.webp">
+										</picture>
+									</div>
+									<a href="#!" data-fls-button="" class="item-card__button button">Learn More</a>
+								</article>
+								<article data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="products__item item-card">
+									<div class="item-card__logo">
+										<picture>
+											<img alt="zort vaults" src="./assets/img/products-section/zort-vaults.webp">
+										</picture>
+									</div>
+									<div class="item-card__text item-card__text--pc">
+										<p>Turn your guesswork into earnings with our one-of-a-kind prediction platform</p>
+									</div>
+									<div class="item-card__text item-card__text--tablet">
+										<p>Curated crypto portfolios with auto-rebalancing</p>
+									</div>
+									<div class="item-card__image">
+										<picture>
+											<img alt="zort vaults diagramm" src="./assets/img/products-section/zort-vaults-ui.webp">
+										</picture>
+									</div>
+									<a href="#!" data-fls-button="" class="item-card__button button">Learn More</a>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="footer__main-bg">
+					<picture>
+						<source media="(max-width: 767px)" srcset="./assets/img/footer/background-767.webp" type="image/webp">
+						<img alt="Image" src="./assets/img/footer/background.webp">
+					</picture>
+				</div>
+				<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3" class="footer__ellipse-bg">
+					<picture>
+						<source media="(max-width: 767px)" srcset="./assets/img/footer/bg-ellipse-small-767.webp" type="image/webp">
+						<img alt="Image" src="./assets/img/footer/bg-ellipse-small.webp">
+					</picture>
+				</div>
+				<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3" class="footer__stars-bg">
+					<picture>
+						<source media="(max-width: 767px)" srcset="./assets/img/footer/stars-767.webp" type="image/webp">
+						<img alt="Image" src="./assets/img/footer/stars.webp">
+					</picture>
+				</div>
+				<div class="footer__container">
+					<div class="footer__content">
+						<div class="footer__head head-footer">
+							<a data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" href="#!" class="head-footer__logo">
+								<picture>
+									<img alt="Logo" src="./assets/img/Logo.webp">
+								</picture>
+							</a>
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="head-footer__action">
+								<a href="#!" class="head-footer__button button button--green">Join Arena</a>
+							</div>
+							<div class="head-footer__items">
+								<div class="head-footer__item item-menu item-menu--mobile">
+									<h3 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__title">Products</h3>
+									<ul class="item-menu__list">
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference item-menu__reference--mobile">
+											<a href="#!" class="item-menu__link item-menu__link--mobile">
+												Zort
+												<span>Trading Arena</span>
+												<span class="menu--icon-plus"></span>
+											</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference item-menu__reference--mobile">
+											<a href="#!" class="item-menu__link item-menu__link--mobile">
+												Z
+												<span>Vaults</span>
+												<span class="menu--icon-plus"></span>
+											</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference item-menu__reference--mobile">
+											<a href="#!" class="item-menu__link item-menu__link--mobile">
+												Zort
+												<span>Lite</span>
+												<span class="menu--icon-plus"></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="head-footer__item item-menu item-menu--pc">
+									<h3 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__title">Trading Arena</h3>
+									<ul class="item-menu__list">
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">About</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">How It Works</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Reviews</a>
+										</li>
+									</ul>
+								</div>
+								<div class="head-footer__item item-menu item-menu--pc">
+									<h3 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__title">ZVaults</h3>
+									<ul class="item-menu__list">
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">About</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">How It Works</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Reviews</a>
+										</li>
+									</ul>
+								</div>
+								<div class="head-footer__item item-menu item-menu--pc">
+									<h3 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__title">Zort Lite</h3>
+									<ul class="item-menu__list">
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Technology</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Security</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Zort Coin</a>
+										</li>
+									</ul>
+								</div>
+								<div class="head-footer__item item-menu">
+									<h3 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__title">Company</h3>
+									<ul class="item-menu__list">
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">About Us</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Support</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">FAQ's</a>
+										</li>
+									</ul>
+								</div>
+								<div class="head-footer__item item-menu">
+									<h3 data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__title">Resources</h3>
+									<ul class="item-menu__list">
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Terms of Service</a>
+										</li>
+										<li data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="item-menu__reference">
+											<a href="#!" class="item-menu__link">Privacy Policy</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="head-footer__app app">
+								<h3 data-fls-watcher="" watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" class="app__title">Get the app</h3>
+								<div class="app__actions">
+									<a data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" href="#!" data-fls-button="" class="app__button button button--small">Login</a>
+									<a data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.2" href="#!" data-fls-button="" class="app__button button button--small button--green">Sign Up</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer__bottom bottom-footer">
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="bottom-footer__social">
+								<a href="#!" class="bottom-footer__link bottom-footer__link--instagram bottom-footer__link--icon-instagram">
+									<span class="bottom-footer__text">Instagram</span>
+								</a>
+								<a href="#!" class="bottom-footer__link bottom-footer__link--x bottom-footer__link--icon-x">
+									<span class="bottom-footer__text">Twitter</span>
+								</a>
+								<a href="#!" class="bottom-footer__link bottom-footer__link--youtube bottom-footer__link--icon-youtube">
+									<span class="bottom-footer__text">YouTube</span>
+								</a>
+								<a href="#!" class="bottom-footer__link bottom-footer__link--telegram bottom-footer__link--icon-telegram">
+									<span class="bottom-footer__text">Telegram</span>
+								</a>
+							</div>
+							<div data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1" class="bottom-footer__copy">© ZORT Inc. 2023 All rights reserved.</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
